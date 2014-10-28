@@ -1,6 +1,6 @@
 FROM debian:jessie
 RUN apt-get update -y
-RUN apt-get install git python python-pymongo python-yaml -y
+RUN apt-get install git python python-pymongo python-yaml mongodb -y
 WORKDIR /tmp/importer
 RUN git clone https://github.com/TheTorProject/ooni-pipeline.git
 RUN chmod u+rx /tmp/importer/ooni-pipeline/bin/oonipipeline
